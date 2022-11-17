@@ -1,4 +1,5 @@
 # VS Code
+
 This is a quick guide to my VS Code Setup
 
 ## Settings
@@ -11,6 +12,23 @@ Enable these [settings](https://code.visualstudio.com/docs/getstarted/settings#_
   "explorer.fileNesting.enabled": true, #See https://www.youtube.com/shorts/5kikdSqDm48
   "git.branchPrefix": "yourname/", # create git branches with your name as the prefix
 }
+```
+
+## Git
+
+Use VS Code as default git editor
+
+```
+[core]
+  editor = code --wait
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 ```
 
 ## Extensions
